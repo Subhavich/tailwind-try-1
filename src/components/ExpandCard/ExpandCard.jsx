@@ -9,15 +9,18 @@ import CardHeroImage from "./CardHeroImage";
 import CardBackdrop from "./CardBackdrop";
 import Modal from "../Modal/Modal";
 
-export default function ExpandCard({
-  backdropImage,
-  heroText,
-  heroImage,
-  subtitle,
-  textArray,
-  imageArray,
-  customer,
-}) {
+export default function ExpandCard(props) {
+  const {
+    backdropImage,
+    heroText,
+    heroImage,
+    subtitle,
+    textArray,
+    imageArray,
+    customer,
+    projectImage,
+    projectBackground,
+  } = props;
   const [shownCard, setShownCard] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const conditionalContentClass =
@@ -49,8 +52,9 @@ export default function ExpandCard({
   // Rendering
   return (
     <>
-      <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <Modal modalOpen={modalOpen} setModalOpen={setModalOpen} {...props} />
       <div
+        onClick={() => setModalOpen(true)}
         onMouseEnter={() => setShownCard(true)}
         onMouseLeave={() => setShownCard(false)}
         className={
