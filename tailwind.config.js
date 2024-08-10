@@ -11,6 +11,9 @@ export default {
       gridTemplateRows: {
         row550: "550px",
       },
+      gridAutoRows: {
+        autoRow550: "550px",
+      },
       keyframes: {
         slidein: {
           "0%": {

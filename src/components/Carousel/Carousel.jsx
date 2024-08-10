@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CarouselCard from "./CarouselCard";
 import CarouselCardLight from "./CarouselCardLight";
-export default function Slider() {
+export default function Slider({ projectData }) {
   var settings = {
     dots: true,
     infinite: true,
@@ -13,16 +13,23 @@ export default function Slider() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const {} = projectData;
   return (
-    <div className="mt-8  ">
-      <Slide {...settings}>
-        <CarouselCard />
-        <CarouselCardLight />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-        <CarouselCard />
-      </Slide>
-    </div>
+    <>
+      <div className="mt-8  ">
+        <Slide {...settings}>
+          {projectData.map((project) => {
+            return <CarouselCard project={project} />;
+          })}
+        </Slide>
+      </div>
+      <div className="mt-8  ">
+        <Slide {...settings}>
+          {projectData.map((project) => {
+            return <CarouselCardLight project={project} />;
+          })}
+        </Slide>
+      </div>
+    </>
   );
 }

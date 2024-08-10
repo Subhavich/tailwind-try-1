@@ -1,8 +1,5 @@
-import { animate, AnimatePresence, motion } from "framer-motion";
-import { FiAlertCircle } from "react-icons/fi";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import ModalBlock from "./ModalBlock";
-import CardLogo from "../ExpandCard/CardLogo";
 
 export default function Modal({
   modalOpen,
