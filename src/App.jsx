@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import TwCardsPage from "./pages/TwCards";
+import HomePage from "./pages/Home";
 import RootLayout from "./pages/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    children: [{ path: "/", element: <TwCardsPage /> }],
+    children: [{ path: "/", element: <HomePage /> }],
   },
 ]);
 
