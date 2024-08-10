@@ -24,7 +24,7 @@ export default function ExpandCard(props) {
   const [shownCard, setShownCard] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const conditionalContentClass =
-    "px-6 pb-6 rounded-b-lg animate-slideIn mt-4 text-sm font-semibold bg-white text-left box-border max-w-60 w-full ";
+    "sm:block hidden px-6 pb-6 rounded-b-lg animate-slideIn mt-4 text-sm font-semibold bg-white text-left box-border max-w-60 w-full ";
   const conditionalContent = shownCard ? (
     // Project informations (on card mouseenter)
     <>
@@ -66,17 +66,20 @@ export default function ExpandCard(props) {
         {/* backdrop */}
         <div className="absolute -z-20 w-60 h-60 bg-gradient-to-t from-white opacity-95 "></div>
         {/* container */}
-        <div className="py-8 px-6 ">
+        <div className="py-4 px-6 sm:py-8">
           <CardHeroImage link={heroImage} />
           {/* main text */}
           <CardHero text={heroText} />
           {/* customer section */}
-          <div className="text-left w-full">
+          <div className="text-left w-full sm:block hidden  ">
             <h6 className="font-bold">{customer}</h6>
             <p>Customer Story</p>
           </div>
         </div>
         {conditionalContent}
+        <div className="px-2">
+          <p className="sm:hidden">{projectBackground}</p>
+        </div>
       </div>
     </>
   );
