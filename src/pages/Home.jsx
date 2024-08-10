@@ -1,5 +1,4 @@
 import ExpandCard from "../components/ExpandCard/ExpandCard";
-import DropdownCard from "../components/DropdownCard";
 import Slider from "../components/Carousel/Carousel";
 // heroText => impact 2x sentences
 // customer => company and person

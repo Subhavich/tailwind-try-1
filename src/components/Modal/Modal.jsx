@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import ModalBlock from "./ModalBlock";
+import { createPortal } from "react-dom";
 
 export default function Modal({
   modalOpen,
@@ -13,7 +14,7 @@ export default function Modal({
   projectImage,
   projectBackground,
 }) {
-  return (
+  return createPortal(
     <AnimatePresence>
       {modalOpen ? (
         <motion.div
@@ -90,6 +91,7 @@ export default function Modal({
       ) : (
         <></>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.getElementById("modal")
   );
 }
