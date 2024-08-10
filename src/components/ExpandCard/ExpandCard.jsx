@@ -58,7 +58,7 @@ export default function ExpandCard(props) {
         onMouseEnter={() => setShownCard(true)}
         onMouseLeave={() => setShownCard(false)}
         className={
-          "cursor-pointer hover:z-40 mt-8 box-content w-full max-w-60 border border-gray-200 rounded-lg shadow"
+          "cursor-pointer hover:z-40 mt-8 pb-4 box-content w-full max-w-60 border border-gray-200 rounded-lg shadow"
         }
       >
         {/* picture */}
@@ -78,7 +78,7 @@ export default function ExpandCard(props) {
         </div>
         {conditionalContent}
         <div className="px-2">
-          <p className="sm:hidden">{projectBackground}</p>
+          <p className="sm:hidden text-sm px-2">{projectBackground}</p>
         </div>
       </div>
     </>
