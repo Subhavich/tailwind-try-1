@@ -6,7 +6,7 @@ import projectData from "../projectData";
 export default function HomePage() {
   return (
     <>
-      <div className="grid grid-cols-autoFit260 justify-items-center auto-rows-autoRow550 ">
+      <div className="border pb-8 grid grid-cols-autoFit260 justify-items-center auto-rows-autoRow550 ">
         {projectData.map((project) => {
           return <ExpandCard {...project} />;
         })}
