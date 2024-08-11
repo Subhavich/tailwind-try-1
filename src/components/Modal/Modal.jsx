@@ -26,7 +26,7 @@ export default function Modal({
         >
           <motion.div
             initial={{ scale: 0, rotate: "12.5deg" }}
-            animate={{ scale: 1, rotate: "0deg" }}
+            animate={{ scale: 1, rotate: "0deg" }} 
             exit={{ scale: 0, rotate: "0deg" }}
             onClick={(e) => e.stopPropagation()}
             className=" bg-white text-white rounded-lg w-full max-w-sm sm:max-w-lg shadow-xl cursor-default relative overflow-hidden "
@@ -48,9 +48,9 @@ export default function Modal({
                 <ModalBlock className=" hidden col-span-12 sm:flex md:grid md:grid-cols-2 md:grid-rows-2 justify-center gap-16 md:gap-4 place-items-center text-white md:col-span-4">
                   {imageArray.map((link) => {
                     return (
-                      <img
+                      <img 
                         src={link}
-                        className="size-12 rounded-sm md:col-span-1 md:size-8 "
+                        className=" rounded-sm md:col-span-1 md:size-8 size-12 "
                       />
                     );
                   })}

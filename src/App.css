@@ -11,3 +11,11 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-template-rows: 550px;
 }
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
